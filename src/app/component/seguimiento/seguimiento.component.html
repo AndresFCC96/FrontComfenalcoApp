@@ -1,0 +1,18 @@
+<app-header></app-header>
+<br><br>
+<div class="jumbotron" *ngFor="let subsidio of subsidio">
+    <h1 class="display-3">{{subsidio.programa}}</h1>
+    <div class="card border-success mb-3" style="max-width: 200rem;">
+        <div class="card-body">
+          <h3 class="card-title">Estado de la aplicacion: {{subsidio.estado}}</h3>
+          <p class="card-text">{{subsidio.infoEstado}}</p>
+        </div>
+    </div>
+    <hr class="my-4">
+    <h3>Historial de notificaciones:</h3>
+    <div class="alert alert-dismissible alert-primary">
+        <h4 class="alert-heading">Postulacin Exitosa !</h4>
+    </div>
+    <p class="lead">
+    </p>
+</div>

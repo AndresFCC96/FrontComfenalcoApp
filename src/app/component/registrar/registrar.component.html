@@ -1,0 +1,59 @@
+<body>
+    <br><br><br><br><br><br><br>
+<div class="row">
+    <div class="col-sm-2">
+    </div>
+    <div class="card mb-3" style="max-width: 740px;">
+        <div class="row g-0">
+          <div class="col-md-7"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <img src="https://www.comfenalcovalle.com.co/wp-content/uploads/2018/05/Logo-comfenalco-valle.png" width="500">
+          </div>
+          <div class="col-md-5">
+            <div class="card text-white bg-success" style="max-width: 200rem;">
+                <div class="card-body">
+                  <h2 class="card-title">Registrarse</h2>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Datos de ingreso:</label>
+                    <input [(ngModel)]="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" [(ngModel)]="usuarios.email">
+                    <input [(ngModel)]="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña" [(ngModel)]="usuarios.password">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Datos basicos:</label>
+                    <div class="form-group" >
+                      <select class="custom-select" [(ngModel)]="usuarios.idTipoDoc">
+                        <option>Tipo de documento</option>
+                        <option *ngFor="let tipoDocumento of tipoDocumento" value="{{tipoDocumento.ID_TIPO_DOC}}">{{tipoDocumento.DOCUMENTO}}</option>
+                      </select>
+                    </div>
+                    <input type="text" class="form-control" id="numeroDocumento" placeholder="Ingrese su numero de documento" [(ngModel)]="usuarios.numeroDocumento">
+                    <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre" [(ngModel)]="usuarios.nombre">
+                    <input type="text" class="form-control" id="apellido" placeholder="Ingrese su apellido" [(ngModel)]="usuarios.apellido">
+                    <input type="date" class="form-control" id="fechaNacimiento" placeholder="Fecha de nacimiento" [(ngModel)]="usuarios.fechaNacimiento">
+                    <div class="form-group">
+                      <select class="custom-select" [(ngModel)]="usuarios.idGnr">
+                        <option selected="">Genero</option>
+                        <option *ngFor="let genero of genero" value="{{genero.ID_GENERO}}">{{genero.GENERO}}</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <select class="custom-select" [(ngModel)]="usuarios.idPais">
+                        <option selected="">Pais</option>
+                        <option *ngFor="let paises of paises" value="{{paises.ID_PAIS}}">{{paises.PAIS}}</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <select class="custom-select" [(ngModel)]="usuarios.idCiudad">
+                        <option selected="">Ciudad</option>
+                        <option *ngFor="let ciudades of ciudades" value="{{ciudades.ID_CIUDAD}}">{{ciudades.CIUDAD}}</option>
+                      </select>
+                    </div>
+                  </div>
+                  <button (click)="registrar()" type="button" class="btn btn-primary mb-3">Registrarse</button>
+                  <button [routerLink]="['/ingresar']" routerLinkActive="router-link-active"  type="button" class="btn btn-warning mb-3">Cancelar</button>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</body>

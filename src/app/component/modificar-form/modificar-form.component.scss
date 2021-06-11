@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+#sidebar-toggle{
+display: none;
+}
+
+.sidebar {
+  height: 100%;
+  width: 290px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  background: #027581;
+  color: #fff;
+  overflow-y: auto;
+  transition: width 500ms;
+}
+
+.sidebar-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0rem 1rem;
+}
+
+.sidebar-menu{
+  padding: 1rem;
+}
+
+
+.sidebar li{
+  margin-bottom: 1rem;
+}
+
+.sidebar a {
+  color: var(--main-color);
+  font-size: 1.2rem;
+}
+
+.sidebar a span:last-child {
+padding-left: .6rem;
+}
+
+#sidebar-toggle:checked ~ .sidebar {
+width: 60px;
+}
+
+#sidebar-toggle:checked ~ .sidebar .sidebar-header h3 span,
+#sidebar-toggle:checked ~ .sidebar li span:last-child{
+display: none;
+}
+
+
+#sidebar-toggle:checked ~ .sidebar .sidebar-header,
+#sidebar-toggle:checked ~ .sidebar li{
+display: flex;
+justify-content: center;
+}
+
+#sidebar-toggle:checked ~ .main-content {
+left: -220px;
+}
+
+#sidebar-toggle:checked ~ .main-content header {
+left: 60px;
+width: 100%;
+}
+
+.main-content{
+  position: relative;
+  margin-left: -120px;
+  margin-bottom: 1rem;
+  width: 2000px;
+  transition: margin-left 500ms;
+}
+
+main {
+  margin-top: 60px;
+  background: #f1f5f9;
+  min-height: 90vh;
+  padding: 4rem;
+}
+
+.card-header{
+margin-bottom: 15px;
+}
+
+.pText{
+margin-left: 450px;
+margin-bottom: 45px;
+}
+
+.cardContainer{
+width: 1000px;
+height: 1000px;
+left: 90px;
+}
+
+.form-group{
+margin-bottom: 15px;
+}
+
+.btn{
+width: 100px;
+height: 50px;
+margin-top: 45px;
+margin-left: 500px;
+margin-right: 70px;
+}
+
+.form-select{
+width: 500px;
+}

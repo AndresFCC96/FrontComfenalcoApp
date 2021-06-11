@@ -1,0 +1,212 @@
+:root{
+  --main-color: #027581;
+  --color-dark: #1D2231;
+  --text-grey: #8390A2;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+th, td {
+padding: 15px;
+text-align: left;
+color: var(--color-dark);
+}
+
+#sidebar-toggle{
+display: none;
+}
+
+.sidebar {
+  height: 100%;
+  width: 290px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  background: #027581;
+  color: #fff;
+  overflow-y: auto;
+  transition: width 500ms;
+}
+
+.sidebar-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0rem 1rem;
+}
+
+.sidebar-menu{
+  padding: 1rem;
+}
+
+
+.sidebar li{
+  margin-bottom: 1rem;
+}
+
+.sidebar a {
+  color: var(--main-color);
+  font-size: 1.2rem;
+}
+
+.sidebar a span:last-child {
+padding-left: .6rem;
+}
+
+#sidebar-toggle:checked ~ .sidebar {
+width: 60px;
+}
+
+#sidebar-toggle:checked ~ .sidebar .sidebar-header h3 span,
+#sidebar-toggle:checked ~ .sidebar li span:last-child{
+display: none;
+}
+
+
+#sidebar-toggle:checked ~ .sidebar .sidebar-header,
+#sidebar-toggle:checked ~ .sidebar li{
+display: flex;
+justify-content: center;
+}
+
+#sidebar-toggle:checked ~ .main-content {
+left: -220px;
+}
+
+#sidebar-toggle:checked ~ .main-content header {
+left: 60px;
+width: 100%;
+}
+
+.main-content{
+  position: relative;
+  margin-left: -120px;
+  margin-bottom: 1rem;
+  width: 2000px;
+  transition: margin-left 500ms;
+}
+
+// header {
+//     position: fixed;
+//     left: 290px;
+//     top: 0;
+//     z-index: 100;
+//     width: calc(100% - 290px);
+//     background: #fff;
+//     height: 60px;
+//     padding: 0rem 1rem;
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     border-bottom: 1px solid #ccc;
+//     transition: left 500ms;
+// }
+
+.social-icons{
+display: flex;
+align-items: center;
+}
+
+.social-icons span,
+.social-icons div{
+margin-left: 0.8rem;
+font-size: 1.2rem;
+
+}
+
+.social-icons div{
+height: 40px;
+width: 40px;
+background-size: cover;
+background-repeat: no-repeat;
+background-image: url(/assets/images/walter.jpg);
+border-radius: 50%;
+}
+
+main {
+  margin-top: 60px;
+  background: #f1f5f9;
+  min-height: 90vh;
+  padding: 4rem;
+  width: 100%;
+}
+
+.dash-title{
+color: #1D2231;
+margin-bottom: 1rem;
+}
+
+.dash-cards{
+display: flex;
+margin: 15px;
+}
+
+.card-single{
+background: #fff;
+border-radius: 15px;
+margin-right: 50px;
+height: 100px;
+}
+
+.pendientes{
+  background: #fff;
+}
+
+.aprobado{
+background: lightgreen;
+}
+
+.rechazadas{
+background: lightpink;
+}
+
+.enProceso{
+background: palegoldenrod;
+}
+
+.postulado{
+background: lightskyblue;
+}
+
+.card-body{
+padding: 1rem;
+display: flex;
+align-items: center;
+}
+
+.card-body span{
+font-size: 1.8rem;
+color: #777;
+}
+
+.listaCard{
+margin-top: 40px;
+width: 1300px;
+align-items: center;
+margin-bottom: 60px;
+}
+.card-header{
+height: 40px;
+background: #fff;
+}
+
+.table-hover {
+width: 1200px;
+margin-bottom: 40px;
+}
+
+.btn{
+height: 30px;
+width: 80px;
+margin-left: -40px;
+}
+

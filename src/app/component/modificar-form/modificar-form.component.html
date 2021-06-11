@@ -1,0 +1,93 @@
+<body>
+  <input type="checkbox" id="sidebar-toggle">
+  <div class="sidebar">
+    <div class="sidebar-header mt-4 ">
+      <h3 class="brand">
+        <span class="ti ti-unlink ml-2"></span>
+        <span class="ml-2 mr-4">Comfenalco-App</span>
+      </h3>
+      <label for="sidebar-toggle" class="ti ti-menu-alt"></label>
+    </div>
+
+    <div class="sidebar-menu mt-5">
+      <ul>
+        <li>
+          <a href="" [routerLink]="['/dashboard']" routerLinkActive="router-link-active">
+            <span class="ti ti-home"></span>
+            <span>Inicio</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="ti ti-close"></span>
+            <span>Salir</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span></span>
+            <span></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="main-content">
+
+    <main>
+      <form #solicitudForm = "ngForm">
+        <fieldset>
+          <legend class="mb-4">Formulario de modificacion de  solicitud</legend>
+          <!-- <div class="form-group row ">
+            <label for="idSub" class="col-sm-2 col-form-label ">Id Subsidio</label>
+            <div class="col-sm-3 ">
+              <input [(ngModel)]="solicitud.idSubsidios"  type="text" class="form-control-plaintext" name="idSub" id="idSub" placeholder="Ingrese el id subsidio" >
+            </div>
+          </div>
+          <div class="form-group row ">
+            <label for="programa" class="col-sm-2 col-form-label ">Programa</label>
+            <div class="col-sm-3 ">
+              <input [(ngModel)]="solicitud.idPrograma"  type="text" class="form-control-plaintext" name="programa" id="programa" placeholder="Ingrese el programa" >
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="usuario" class="col-sm-2 col-form-label">Usuario</label>
+            <div class="col-sm-3">
+              <input [(ngModel)]="solicitud.idUsuario" type="text" class="form-control-plaintext" name="usuario" id="usuario" placeholder="Ingrese el nombre de usuario" >
+            </div>
+          </div> -->
+          <div class="form-group row">
+            <label for="fecha" class="col-sm-2 col-form-label">Fecha</label>
+            <div class="col-sm-3">
+              <input [(ngModel)]="solicitud.fechaFinalizacion" type="date date:'yyyy-MM-dd'" class="form-control-plaintext" name="fecha" id="fecha" id="staticDate">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="usuario" class="col-sm-2 col-form-label mt-3">Estado</label>
+            <select [(ngModel)]="notificacion.idNotificacion" (change)="selectChangeHandler($event)" class="form-select form-control" aria-label="Default select example">
+              <option selected="">Consultar estado</option>
+              <option [value]="1">Por verificar.</option>
+              <option [value]="2">Faltan documentos</option>
+              <option [value]="3">Rechazado</option>
+              <option [value]="4">Formato Incorrecto</option>
+                <option [value]="5">Carga exitosa</option>
+            </select>
+          </div>
+          <div class="form-group row" *ngIf="opcionSeleccionada == 3">
+            <label for="fecha" class="col-sm-2 col-form-label">Comentario</label>
+            <div class="col-sm-3">
+              <input type="text" class="form-control-plaintext" name="mensaje" 
+              (keyup)="getMessage($event.target.value)">
+            </div>
+          </div>
+          <button type="submit" (click)='update()' (click)='guardarNotiSoli()' class="btn btn-primary btnAceptar">Submit</button>
+
+        </fieldset>
+      </form>
+
+    </main>
+  </div>
+
+</body>
+

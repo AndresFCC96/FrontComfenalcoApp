@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">AppComfenalco</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarColor03">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/home']" routerLinkActive="router-link-active" >Inicio
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/formularioAplicacion']" routerLinkActive="router-link-active">Formulario de aplicación</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"[routerLink]="['/contacto']" routerLinkActive="router-link-active">Contactar asesor</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <h5>Bienvenido {{nombre}} </h5> &nbsp; &nbsp; &nbsp; &nbsp;
+        <button (click)="salir()" type="button" class="btn btn-danger">Salir</button>
+      </form>
+    </div>
+  </nav>

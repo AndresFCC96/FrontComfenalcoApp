@@ -1,0 +1,110 @@
+<app-header></app-header>
+<br><br>
+
+<div class="row">
+    <div class="col-lg-6 ">
+        <div class="form-group">
+            <select name="modalidad" id="modalidad">
+                <option value="Adquisición de vivienda">Adquisición de vivienda</option>
+                <option value="Construcción en sitio propio">Construcción en sitio propio</option>
+                <option value="Mejoramiento de vivienda">Mejoramiento de vivienda</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-lg-6 ">
+        <div class="form-group">
+            <select name="tipo" id="tipo">
+                <option value="Dependiente">Dependiente</option>
+                <option value="Pensionado">Pensionado</option>
+                <option value="Madre Comunitaria">Madre Comunitaria</option>
+                <option value="Independiente">Independiente</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-4">
+        <div class="form-group">
+            <label for="exampleInputTitle"></label>
+            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre del afiliado">
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="form-group">
+            <label for="exampleInputTitle"></label>
+            <input type="text" class="form-control" id="documento" name="documento" placeholder="Documento de identidad">
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="form-group">
+            <label for="exampleInputTitle"></label>
+            <input type="text" class="form-control" id="expedida" name="expedida" placeholder="Expedida en">
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-3">
+        <div class="form-group">
+            <label for="exampleInputTitle"></label>
+            <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Direccion de domicilio">
+        </div>
+    </div>
+    <div class="col-lg-9">
+        <div class="form-group">
+            <label for="exampleInputTitle"></label>
+            <input type="text" class="form-control" id="correo" name="correo" placeholder="Correo Electronico">
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-3">
+        <div class="form-group">
+            <label for="exampleInputTitle"></label>
+            <input type="text" class="form-control" id="departamento" name="departamento" placeholder="Departamento">
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="form-group">
+            <label for="exampleInputTitle"></label>
+            <input type="text" class="form-control" id="municipio" name="municipio" placeholder="Municipio">
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="form-group">
+            <label for="exampleInputTitle"></label>
+            <input type="text" class="form-control" id="barrio" name="barrio" placeholder="Barrio">
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="form-group">
+            <label for="exampleInputTitle"></label>
+            <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Telefono">
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="form-group">
+            <label for="exampleInputTitle"></label>
+            <input type="text" class="form-control" id="razonSocial" name="razonSocial" placeholder="Razon social de la empresa en la que esta afiliado">
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="form-group">
+            <label for="exampleInputTitle"></label>
+            <input type="text" class="form-control" id="direccionE" name="direccionE" placeholder="Direccion de la empresa">
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="form-group">
+            <label for="exampleInputTitle"></label>
+            <input type="text" class="form-control" id="telefonoE" name="telefonoE" placeholder="Telefono de la empresa">
+        </div>
+    </div>
+</div>
+
+<button type="button" (click)="generatePdf()" class="btn btn-primary btn-lg btn-block">CARGAR LOS DOCUMENTOS</button>

@@ -1,0 +1,17 @@
+
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre Ciudad</th>
+        <th scope="col">Departamento</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-secondary" *ngFor="let ciudades of ciudades">
+        <td>{{ciudades.ID_CIUDAD}}</td>
+        <td>{{ciudades.CIUDAD}}</td>
+        <td>{{ciudades.ID_DEPARTAMENTO}}</td>
+      </tr>
+    </tbody>
+  </table>
