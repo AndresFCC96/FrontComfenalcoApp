@@ -1,0 +1,16 @@
+select, option {
+    background: rgba(231, 231, 231, 0.3);
+    width: 190px;
+    border-radius: 20px;
+    padding: 20px 20px;
+    text-align: left;
+    font-weight: bold;
+
+}
+
+select:hover{
+    border: 2px solid rgb(36, 235, 30);
+    background: rgba(231, 231, 231, 0.9);
+}
+
+
